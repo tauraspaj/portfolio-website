@@ -1,0 +1,181 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #13171d;
+	overflow-x: hidden;
+}
+
+.font-poppins{
+	font-family: 'Poppins', sans-serif;
+}
+
+.container{
+	background-color: transparent;
+	width: 100%;
+	margin: 0 auto;
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	min-height: 8vh;
+	padding: 20px;
+}
+
+.logo{
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 24px;
+	color: #fff;
+	z-index: ;
+}
+
+.nav-links{
+	width: 60%;
+	height: 100%;
+	background-color: #1e252e;
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 20% 0 0 50%;
+	z-index: 1;
+	transform: translateX(100%);
+	transition: transform 1s cubic-bezier(1, 0, 0, 1);
+}
+
+.nav-active{
+	transform: translateX(0%);
+}
+
+.nav-item{
+	list-style: none;
+	opacity: 0;
+	position: relative;
+	padding: 6px 0;
+}
+
+.nav-item::after{
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: red;
+	background-image: linear-gradient(to right, #e96443 , #904e95);
+	position: absolute;
+	left: 0;
+	transform: scaleX(0);
+	transition: transform 0.3s;
+}
+
+.nav-item::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.nav-item:hover:not(.active)::after{
+	transform: scaleX(1);
+}
+
+.nav-item a{
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.active::after{
+	transform: scaleX(1);
+}
+
+
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.burger{
+	width: 22px;
+	height: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.burger-line{
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	transition: all 0.8s;
+}
+
+.nav-active .burger-line1{
+	transform: rotateZ(-405deg) translate(-5px, 6px);
+}
+
+.nav-active .burger-line2{
+	opacity: 0;
+}
+
+.nav-active .burger-line3{
+	transform: rotateZ(405deg) translate(-5px, -6px);
+}
+
+@media screen and (min-width: 768px){
+	.nav-links{
+		width: 40%;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.container{
+		width: 90%;
+	}
+
+	.burger{
+		display: none;
+	}
+
+	nav {
+		align-items: center;
+		z-index: 0;
+	}
+
+	.nav-links{
+		position: static;
+		width: 40%;
+		right: 0px;
+		height: 8vh;
+		top: 0;
+		background-color: transparent;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		transform: translateX(0%);
+		transition: transform 1s cubic-bezier(1, 0, 0, 1);
+		margin-right: 0;
+		cursor: pointer;
+		z-index: 0;
+	}
+
+	.nav-item{
+		opacity: 1;
+	}
+}
