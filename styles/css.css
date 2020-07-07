@@ -13,6 +13,10 @@ body{
 	font-family: 'Poppins', sans-serif;
 }
 
+.font-rubik{
+	font-family: 'Rubik', sans-serif;
+}
+
 .container{
 	background-color: transparent;
 	width: 100%;
@@ -125,6 +129,33 @@ nav{
 	transition: all 0.8s;
 }
 
+
+
+
+
+.title{
+	width: 100%;
+	text-align: center;
+	padding: 65px 0;
+}
+
+.title h1{
+	margin: 0 auto;
+	color: #fff;
+	font-size: 35px;
+	font-weight: 700;
+}
+
+.title .subtitle{
+	color: #8d949e;
+	font-size: 20px;
+	margin: 10px;
+}
+
+
+
+
+
 .nav-active .burger-line1{
 	transform: rotateZ(-405deg) translate(-5px, 6px);
 }
@@ -140,6 +171,14 @@ nav{
 @media screen and (min-width: 768px){
 	.nav-links{
 		width: 40%;
+	}
+
+	.title h1{
+		font-size: 50px;
+	}
+
+	.title .subtitle{
+		font-size: 25px;
 	}
 }
 
@@ -177,5 +216,13 @@ nav{
 
 	.nav-item{
 		opacity: 1;
+	}
+
+	.title h1{
+		font-size: 55px;
+	}
+
+	.title .subtitle{
+		font-size: 25px;
 	}
 }
