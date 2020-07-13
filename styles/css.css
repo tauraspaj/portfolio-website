@@ -253,6 +253,72 @@ nav{
 	margin-left: 5px;
 }
 
+.info{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 40px 20px;
+}
+
+.about-me{
+	color: #fff;
+	font-size: 32px;
+	margin-bottom: 15px;
+}
+
+.info-columns{
+	display: flex;
+	flex-direction: column;
+}
+
+.info-columns div{
+	padding-bottom: 40px;
+}
+
+.info-h3{
+	color: #fff;
+	font-size: 21px;
+	font-weight: 300;
+	margin-bottom: 7px;
+}
+
+.info-col1 .portfolio-button{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #E94057;
+	font-weight: 700;
+	font-size: 16px;
+	letter-spacing: 1px;
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 15px;
+	margin-top: 10px;
+	border: 2px solid #3b3f45;
+	border-image: linear-gradient(45deg, #8A2387 , #F27121) 10% stretch;
+}
+
+.info-col2 p{
+	color: #8d949e;
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+
+.info-col3 p{
+	color: #8d949e;
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 24px;
+	margin-bottom: 5px;
+}
+
+.info-col3 p .service-title{
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
 @media screen and (min-width: 768px){
 	.nav-links{
 		width: 40%;
@@ -333,6 +399,17 @@ nav{
 		padding: .5em;
 		color: black;
 		border-radius: 4px;
+	}
+
+	.info{
+		width: 80%;
+		display: flex;
+		justify-content: center;
+		margin: 60px auto;
+	}
+
+	.about-me{
+		font-size: 42px;
 	}
 }
 
@@ -476,5 +553,44 @@ nav{
 
 	.intro-picture img:hover{
 		transform: scale(1.15) rotateZ(2deg);
+	}
+
+	.info-columns{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.info-columns div{
+		flex: 1;
+	}
+
+	.info-columns div{
+		padding: 0 15px;
+	}
+
+	.info-columns div:first-child{
+		padding-left: 0px;
+	}
+
+	.info-columns div:last-child{
+		padding-right: 0px;
+	}
+
+	.info-col1 .portfolio-button{
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #8d949e;
+		font-weight: 700;
+		font-size: 16px;
+		letter-spacing: 1px;
+		box-sizing: border-box;
+		display: inline-block;
+		padding: 15px;
+		margin-top: 10px;
+		transition: color 0.3s;
+	}
+
+	.info-col1 .portfolio-button:hover{
+		color: #E94057;
 	}
 }
