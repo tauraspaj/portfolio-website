@@ -282,7 +282,7 @@ nav{
 	margin-bottom: 7px;
 }
 
-.info-col1 .portfolio-button{
+.portfolio-button{
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #E94057;
@@ -302,7 +302,7 @@ nav{
 	font-size: 15px;
 	font-weight: 300;
 	letter-spacing: 1px;
-	line-height: 24px;
+	line-height: 28px;
 }
 
 .info-col3 p{
@@ -310,13 +310,86 @@ nav{
 	font-size: 15px;
 	font-weight: 300;
 	letter-spacing: 1px;
-	line-height: 24px;
+	line-height: 28px;
 	margin-bottom: 5px;
 }
 
 .info-col3 p .service-title{
 	text-transform: uppercase;
 	font-weight: 700;
+}
+
+.timeline-section{
+	width: 100%;
+	margin: 0 auto;
+	color: #fff;
+}
+
+.timeline-title{
+	font-size: 32px;
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+.timeline-container{
+	position: relative;
+}
+
+.timeline-container:before{
+	content: '';
+	position: absolute;
+	left: 30%;
+	width: 1px;
+	height: 100%;
+	background: #fff;
+}
+
+.timeline-container .time{
+	font-size: 14px;
+	color: #8d949e;
+	font-weight: 300;
+}
+
+.timeline-container .timeline-content{
+	font-size: 20px;
+	text-align: left;
+	position: relative;
+	width: 70%;
+	right: -30%;
+	padding: 18px 18px 42px 18px;
+}
+
+.timeline-container .timeline-content:after{
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background-color: #fff;
+	top: 32px;
+	left: -2px;
+}
+
+.timeline .timeline-container .time{
+	width: 30%;
+	position: absolute;
+	text-align: right;
+	padding: 20px;
+	top: 8px;
+}
+
+.read-more-text{
+	width: 100%;
+	text-align: left;
+	color: #8d949e;
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 28px;
+}
+
+.read-more-text a{
+	text-decoration: none;
+	color: #E94057;
 }
 
 @media screen and (min-width: 768px){
@@ -410,6 +483,117 @@ nav{
 
 	.about-me{
 		font-size: 42px;
+	}
+
+	.timeline-container{
+		position: relative;
+	}
+
+	.timeline-container:before{
+		content: '';
+		position: absolute;
+		left: 50%;
+		width: 1px;
+		height: 100%;
+		background: #fff;
+	}
+
+	.timeline-container .time{
+		font-size: 18px;
+		color: #8d949e;
+		font-weight: 300;
+		padding-top: 0px;
+		margin-top: 2px;
+	}
+
+	.timeline-container .timeline-content{
+		font-size: 28px;
+		position: relative;
+		width: 50%;
+		padding: 18px 18px 42px 18px;
+	}
+
+	.timeline-container .timeline-content h3{
+		transition: all .3s;
+		display: inline-block;
+		cursor: default;
+	}
+
+	.timeline-container .timeline-content h3:hover{
+		color: #E94057;
+	}
+	
+	.read-more-text{
+		width: 100%;
+		text-align: left;
+		color: #8d949e;
+		font-size: 15px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		line-height: 28px;
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+		transform: scaleY(0);
+		transition: all .5s;
+		transform-origin: top;
+	}
+
+	:root {
+		--dropdown-height: 0px;
+	}
+
+	.read-more-toggle{
+		opacity: 1;
+		height: var(--dropdown-height);
+		transform: scaleY(1);
+	}
+
+	.timeline-container:nth-child(odd) .timeline-content{
+		text-align: right;
+		left: 0%;
+	}
+
+	.timeline-container:nth-child(even) .timeline-content{
+		text-align: left;
+		right: -50%;
+	}
+
+	.timeline-container .timeline-content:after{
+		content: '';
+		position: absolute;
+		width: 5px;
+		height: 5px;
+		background-color: #fff;
+		top: 38px;
+	}
+
+	.timeline-container:nth-child(odd) .timeline-content:after{
+		left: auto;
+		right: -3px;
+	}
+
+	.timeline-container:nth-child(even) .timeline-content:after{
+		right: auto;
+		left: -2px;
+	}
+
+	.timeline .timeline-container .time{
+		width: 50%;
+		position: absolute;
+		padding: 20px;
+	}
+	
+	.timeline .timeline-container:nth-child(odd) .time{
+		text-align: left;
+		top: 8px;
+		left: 50%;
+	}
+
+	.timeline .timeline-container:nth-child(even) .time{
+		text-align: right;
+		top: 8px;
+		right: 50%;
 	}
 }
 
@@ -576,7 +760,7 @@ nav{
 		padding-right: 0px;
 	}
 
-	.info-col1 .portfolio-button{
+	.portfolio-button{
 		text-transform: uppercase;
 		text-decoration: none;
 		color: #8d949e;
@@ -590,7 +774,7 @@ nav{
 		transition: color 0.3s;
 	}
 
-	.info-col1 .portfolio-button:hover{
+	.portfolio-button:hover{
 		color: #E94057;
 	}
 }
