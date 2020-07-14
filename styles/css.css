@@ -392,6 +392,35 @@ nav{
 	color: #E94057;
 }
 
+.footer{
+	width: 100%;
+	margin: 110px 0;
+	text-align: center;
+}
+
+.soc-media{
+	padding: 10px;
+	background-color: #1b2129;
+	font-size: 20px;
+	color: #8d949e;
+	margin: 0 5px;
+	min-width: 40px;
+	min-height: 40px;
+	text-align: center;
+	transition: all .2s;
+}
+
+.soc-media:hover{
+	color: #fff;
+	background-color: #E94057;
+}
+
+.social-media-wrapper h3{
+	color: #8d949e;
+	font-size: 28px;
+	margin-bottom: 45px;
+}
+
 @media screen and (min-width: 768px){
 	.nav-links{
 		width: 40%;
