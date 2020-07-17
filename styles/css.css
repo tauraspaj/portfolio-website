@@ -421,6 +421,49 @@ nav{
 	margin-bottom: 45px;
 }
 
+.portf-videos{
+	display: flex;
+	flex-direction: column;
+}
+
+.portf-videos .vid{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+.portf-videos .vid .start-icon i{
+	font-size: 54px;
+	color: #F8F8F8;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	transform: translateY(-50%);
+	opacity: .7;
+}
+
+.portf-videos .vid .video-caption{
+	position: absolute;
+	bottom: 2px;
+	right: 10px;
+	text-align: right;
+}
+
+.portf-videos .vid .video-caption h3{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 24px;
+}
+
+.portf-videos .vid .video-caption p{
+	color: #E94057;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+
 @media screen and (min-width: 768px){
 	.nav-links{
 		width: 40%;
@@ -624,6 +667,18 @@ nav{
 		top: 8px;
 		right: 50%;
 	}
+
+	.portf-videos{
+		display: flex;
+		flex-direction: unset;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	.portf-videos .vid{
+		flex-basis: 33% !important;
+		margin: 0;
+	}
 }
 
 @media screen and (min-width: 1024px){
@@ -806,4 +861,40 @@ nav{
 	.portfolio-button:hover{
 		color: #E94057;
 	}
+	
+	.portf-videos .vid{
+		cursor: pointer;
+	}
+
+	.portf-videos .vid .video-caption h3{
+		font-size: 32px;
+	}
+
+	.portf-videos .vid .video-caption p{
+		font-size: 20px;
+	}
+
+	.portf-videos .vid .video-caption{
+		bottom: 15px;
+		right: 20px;
+		opacity: 0;
+		transition: all 0.5s;
+		transform: scale(1.2);
+		transform-origin: bottom right;
+	}
+
+	.portf-videos .vid:hover .video-caption{
+		opacity: 1;
+		transform: scale(1);
+	}
+	
+	.portf-videos .vid .start-icon{
+		opacity: 1;
+		transition: all 0.5s;
+	}
+
+	.portf-videos .vid:hover  .start-icon{
+		opacity: 0;
+	}
+
 }
