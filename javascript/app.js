@@ -22,11 +22,9 @@ const navSlide = () => {
 	});
 }
 
-function myFunction() {
-
-
-	const buttons = document.querySelectorAll('.read-more-button')
-	const readmores = document.querySelectorAll('.read-more-text')
+function dropdownTimeline() {
+	const buttons = document.querySelectorAll('.read-more-button');
+	const readmores = document.querySelectorAll('.read-more-text');
 
 	buttons.forEach((button, index) => {
 		button.addEventListener('click', () => {
@@ -37,5 +35,27 @@ function myFunction() {
 	})
 }
 
+function videoPopup() {
+	const videos = document.querySelectorAll('.vid');
+	const iframes = document.querySelectorAll('.iframe-control');
+	const popups = document.querySelectorAll('.popup');
+	const closePopup = document.querySelectorAll('close-popup');
+
+	videos.forEach((video, index) => {
+		video.addEventListener('click', () => {
+			popups[index].classList.toggle('active');
+		})
+	})
+
+	popups.forEach((popup, index) => {
+		popup.addEventListener('click' , () => {
+			popup.classList.toggle('active');
+			// Stop the video after closing popup by refreshing iframe src
+			iframes[index].src = iframes[index].src;
+		})
+	})
+}
+
 navSlide();
-myFunction();
+dropdownTimeline();
+videoPopup();
