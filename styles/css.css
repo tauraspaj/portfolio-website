@@ -434,7 +434,7 @@ nav{
 }
 
 .portf-videos .vid .start-icon i{
-	font-size: 54px;
+	font-size: 44px;
 	color: #F8F8F8;
 	position: absolute;
 	top: 50%;
@@ -453,13 +453,13 @@ nav{
 .portf-videos .vid .video-caption h3{
 	text-transform: uppercase;
 	color: #fff;
-	font-size: 24px;
+	font-size: 20px;
 	text-shadow: 4px 4px 16px rgba(0,0,0,0.7);
 }
 
 .portf-videos .vid .video-caption p{
 	color: #E94057;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 700;
 }
 
@@ -527,6 +527,131 @@ nav{
 
 .gif-wrapper{
 	display: none;
+}
+
+.blog-wrapper{
+	margin-bottom: 70px;	
+}
+
+.blog{
+	display: flex;
+	flex-direction: column;
+}
+
+.blog-text{
+	flex: 2;
+	order: 2;
+	padding-right: 10px;
+}
+
+.blog-img{
+	flex: 1;
+	order: 1;
+	min-height: 150px;
+	background-image: url('../blogs/gran-canaria/cover.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.blog-info{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.blog-info .date{
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 15px;
+	margin-right: 15px;
+	background-color: #E94057;
+}
+
+.blog-info .blog-title h3{
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.blog-info .blog-title a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.blog-info .blog-title p{
+	color: #8d949e;
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 28px;
+}
+
+.blog-text .blog-intro{
+	margin-top: 45px;
+	text-align: left;
+	color: #8d949e;
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 28px;
+	padding-left: 5px;
+}
+
+.blog-text .blog-intro a{
+	color: #E94057;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.each-blog{
+	margin-top: 50px !important;
+	width: 100%;
+}
+
+.each-blog h1{
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+}
+
+.each-blog .blog-date{
+	color: #E94057;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 28px;
+	margin: 40px 0 40px 0;
+}
+
+.each-blog .para{
+	color: #8d949e;
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 28px;
+	margin: 0 10px 28px 10px;
+}
+
+.each-blog .blog-video-wrap{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+
+.each-blog .blog-video-wrap iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.around-video{
+	width: 100%;
+	margin-top: 60px;
 }
 
 @media screen and (min-width: 768px){
@@ -741,12 +866,60 @@ nav{
 	}
 
 	.portf-videos .vid{
-		flex-basis: 33% !important;
+		flex-basis: 33.33%;
 		margin: 0;
 	}
 
 	.popup .video-wrapper{
 		max-width: 50%;
+	}
+
+	.blog-wrapper{
+		margin-bottom: 70px;	
+	}
+
+	.blog{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.blog-text{
+		flex: 2;
+		order: 1;
+		padding-right: 24px;
+	}
+
+	.blog-info{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.blog-img{
+		flex: 1;
+		order: 2;
+		height: 350px;
+	}
+
+	.blog-info .blog-title h3{
+		font-size: 26px;
+		font-weight: 700;
+	}
+
+	.each-blog{
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.each-blog h1{
+		color: #fff;
+		font-size: 42px;
+		text-align: center;
+	}
+
+	.around-video{
+		width: 70%;
+		margin: 0 auto;
+		margin-top: 50px;
 	}
 }
 
@@ -995,5 +1168,19 @@ nav{
 
 	.portf-videos .vid:hover .gif-wrapper{
 		opacity: 1;
+	}
+	
+	.blog-info .blog-title a{
+		transition: all 0.2s;
+	}
+
+	.blog-info .blog-title a:hover{
+		color: #E94057;
+		text-decoration: none;
+	}
+
+	.each-blog{
+		width: 60%;
+		margin: 0 auto;
 	}
 }
