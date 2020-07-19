@@ -727,13 +727,13 @@ nav{
 	font-weight: 700;
 	font-size: 16px;
 	letter-spacing: 1px;
-	box-sizing: border-box;
 	display: inline-block;
 	padding: 15px;
 	border: 2px solid #3b3f45;
 	background-color: transparent;
 	border-image: linear-gradient(45deg, #8A2387 , #F27121) 10% stretch;
 	cursor: pointer;
+	float: right;
 }
 
 
